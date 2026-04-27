@@ -15,8 +15,12 @@ public class DeleteAss {
 
 
     public static void main(String[] args) throws IOException {
-        String path = "/Users/litian/Documents/Colorful/my-own-creation/tiny-media-manager/daram/一拳超人";
+//        String path = "/Volumes/Extreme SSD/Lee/TV";
+        String path = "/Users/litian/Documents/mac/tiny-media-manager/tv";
         deleteAss(new File(path));
+        deleteAss(new File("/Volumes/Extreme SSD/All/Lee/TV"));
+        deleteAss(new File("/Volumes/Extreme SSD/Lee/TVBAK"));
+        deleteAss(new File("/Volumes/Extreme SSD/Lee/1080P"));
 //        replaceTextAss(new File("/Users/litian/Downloads/Download/Quark/机动战士高达 SEED HD重制版 [POPGO&MAI] [Ma10p_2160p]/字幕备份_副本"));
     }
 
@@ -33,8 +37,13 @@ public class DeleteAss {
                     (assfile.getName().endsWith("cht.zh.ass")
                     || assfile.getName().endsWith("jptc.zh.ass")
                     || assfile.getName().endsWith("JPTC.zh.ass")
-                    || assfile.getName().endsWith(".JPTC.ass")
+                    || assfile.getName().endsWith("CHT.zh.ass")
                             || assfile.getName().endsWith("(1).zh.ass")
+                            || assfile.getName().endsWith("tc.zh.ass")
+                            || assfile.getName().endsWith("TC.zh.ass")
+                            || assfile.getName().endsWith("tc.zh.ass")
+                            || assfile.getName().endsWith("BIG5.zh.ass")
+                            || assfile.getName().endsWith("jpn.zh.ass")
                     )) || assfile.getName().startsWith("._")) {
                 System.out.println(assfile.getName());
                 assfile.delete();

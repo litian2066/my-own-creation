@@ -4,7 +4,7 @@ import java.io.File;
 
 public class FileRenamer {
     public static void main(String[] args) {
-        String folderPath = "/Users/litian/Downloads/Download/Quark/我的英雄学院"; // 替换为实际文件夹路径
+        String folderPath = "/Volumes/Extreme SSD/All/Lee/TVBAK/头文字D (1998)/Season 1/Initial D[Subtitles][CN]/Fifth Stage/SC";
         renameFilesInFolder(new File(folderPath));
     }
 
@@ -28,7 +28,7 @@ public class FileRenamer {
 
     private static void renameFile(File file) {
         String oldName = file.getName();
-        int dashIndex = oldName.lastIndexOf("-");
+        int dashIndex = oldName.lastIndexOf(" - ");
         
         if (dashIndex > 0) {
             String newName = oldName.substring(0, dashIndex).trim();
